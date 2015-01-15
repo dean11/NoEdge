@@ -1,0 +1,35 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Custom
+*.sdf
+*.opensdf
+*.suo
+*.ipch
+*.lib
+*.exe
+*.tlog
+*.filters
+*.ilk
+*.exp
+*.dll
+*.pdb
+*.cso
+*.orig
+*.exe
+
+#Dir
+source/_build/
+source/_lib/
+
