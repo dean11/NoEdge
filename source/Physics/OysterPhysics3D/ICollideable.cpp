@@ -1,0 +1,10 @@
+/////////////////////////////////////////////////////////////////////
+// Created by Dan Andersson 2013
+/////////////////////////////////////////////////////////////////////
+
+#include "ICollideable.h"
+
+using namespace ::Oyster::Collision3D;
+
+ICollideable::ICollideable( Type _type ) : type(_type) {}
+ICollideable::~ICollideable() {}

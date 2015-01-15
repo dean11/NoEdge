@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>632</x>
+      <y>344</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>GameLobby
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>416</y>
+      <w>128</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>GameSession
+--
+/One instance of a game/
+/including n players./</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>664</x>
+      <y>344</y>
+      <w>40</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>24;72;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>664</x>
+      <y>440</y>
+      <w>40</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;&gt;&gt;-</panel_attributes>
+    <additional_attributes>24;88;24;24</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>120</y>
+      <w>368</w>
+      <h>344</h>
+    </coordinates>
+    <panel_attributes>GameServerAPI &lt;&lt;singleton&gt;&gt;
+--
+{innerclass
++ServerInitDesc&lt;&lt;struct&gt;&gt;
+--
+serverName :char pointer
+listenPort :int
+bool broadcast :bool
+ServerInitDesc() :void
+innerclass}
+{innerclass
++GameServerInfo&lt;&lt;struct&gt;&gt;
+--
+listenPort :unsigned int
+serverIp :const char pointer
+innerclass}
+
++static DanBiasServerReturn	ServerInitiate(const ServerInitDesc&amp; desc);
++static ServerStart() :void
++static ServerStop() :void
++static ServerUpdate() :void
++static ServerGetInfo() :GameServerInfo
++static ServerIsRunning() :bool
++static GameSetMapId( val :const int&amp; ) :void
++static GameSetMaxClients( val :const int&amp; ) :void
++static GameSetGameMode(val :const int&amp;) :void
++static GameSetGameTime(val :const int&amp;) :void
++static GameGetMapId() :int
++static GameGetMaxClients() :int
++static GameGetGameMode() :int
++static GameGetGameTime() :int
++static GameGetGameName() :const char pointer
++static GameStart() :bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>384</x>
+      <y>328</y>
+      <w>264</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;&gt;&gt;-</panel_attributes>
+    <additional_attributes>248;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>440</x>
+      <y>424</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>GameLogicAPI
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>512</x>
+      <y>424</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;24;112;24</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>528</y>
+      <w>144</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>GameClient</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>520</x>
+      <y>416</y>
+      <w>120</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;88;64;88;64;24;104;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>448</x>
+      <y>480</y>
+      <w>96</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>GameProtocols
+bg=#aaaaa</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>720</x>
+      <y>160</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>NetworkAPI
+bg=#a21aff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>24</y>
+      <w>320</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>/*HISTORY*/
+--
+10/2-2014
+Restructured old
+--
+elementstyle=wordwrap
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>720</x>
+      <y>160</y>
+      <w>40</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;24;24;256</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>704</x>
+      <y>160</y>
+      <w>40</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;24;24;184</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>384</x>
+      <y>152</y>
+      <w>352</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>336;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>736</x>
+      <y>160</y>
+      <w>40</w>
+      <h>384</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;24;24;368</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>520</x>
+      <y>480</y>
+      <w>136</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;24;120;24;120;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>512</x>
+      <y>432</y>
+      <w>160</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;24;72;24;72;72;144;72;144;96</additional_attributes>
+  </element>
+</diagram>

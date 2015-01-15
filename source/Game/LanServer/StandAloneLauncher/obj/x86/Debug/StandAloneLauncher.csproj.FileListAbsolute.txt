@@ -1,0 +1,4 @@
+D:\Development\No Edge\Code\Game\LanServer\StandAloneLauncher\obj\x86\Debug\StandAloneLauncher.csprojResolveAssemblyReference.cache
+D:\Development\No Edge\Code\Game\LanServer\StandAloneLauncher\obj\x86\Debug\StandAloneLauncher.NoEdgeWindow.resources
+D:\Development\No Edge\Code\Game\LanServer\StandAloneLauncher\obj\x86\Debug\StandAloneLauncher.Properties.Resources.resources
+D:\Development\No Edge\Code\Game\LanServer\StandAloneLauncher\obj\x86\Debug\StandAloneLauncher.csproj.GenerateResource.Cache
